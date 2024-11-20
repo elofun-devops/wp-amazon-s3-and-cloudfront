@@ -31,6 +31,7 @@ use DeliciousBrains\WP_Offload_Media\Providers\Provider;
 use DeliciousBrains\WP_Offload_Media\Providers\Storage\AWS_Provider;
 use DeliciousBrains\WP_Offload_Media\Providers\Storage\DigitalOcean_Provider;
 use DeliciousBrains\WP_Offload_Media\Providers\Storage\GCP_Provider;
+use DeliciousBrains\WP_Offload_Media\Providers\Storage\VNG_Provider;
 use DeliciousBrains\WP_Offload_Media\Providers\Storage\Null_Provider;
 use DeliciousBrains\WP_Offload_Media\Providers\Storage\Storage_Provider;
 use DeliciousBrains\WP_Offload_Media\Settings\Validation_Manager;
@@ -227,6 +228,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 			AWS_Provider::get_provider_key_name()          => 'DeliciousBrains\WP_Offload_Media\Providers\Storage\AWS_Provider',
 			DigitalOcean_Provider::get_provider_key_name() => 'DeliciousBrains\WP_Offload_Media\Providers\Storage\DigitalOcean_Provider',
 			GCP_Provider::get_provider_key_name()          => 'DeliciousBrains\WP_Offload_Media\Providers\Storage\GCP_Provider',
+			VNG_Provider::get_provider_key_name()          => 'DeliciousBrains\WP_Offload_Media\Providers\Storage\VNG_Provider',
 		) );
 
 		static::$delivery_provider_classes = apply_filters( 'as3cf_delivery_provider_classes', array(
